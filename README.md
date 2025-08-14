@@ -4,12 +4,20 @@ A React-based web application that visualizes the lifespan of Nuclei scan events
 
 ## Overview
 
-This application processes Nuclei scan event data from `public/events.jsonl` and displays:
+This application processes Nuclei scan event data from nuclei with `-tags=stats` and displays:
 
 - **Bar Timeline Chart**: Shows the duration of each scan event
 - **Top N Filtering**: View top 10, 25, 50, 100, or all scan events
 - **Interactive Tooltips**: Hover over bars to see detailed scan information
 - **Statistics Summary**: View total scans, average duration, longest and shortest scans
+
+## How to build Nuclei w/ stats enabled
+
+1. Clone nuclei
+2. `make verify`
+3. `make build-stats`
+
+nuclei-stats is avaiable at `./bin/nuclei-stats`
 
 ## Data Format
 
